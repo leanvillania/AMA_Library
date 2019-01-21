@@ -5,9 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Home | AMA Library</title>
     <link rel="stylesheet" href="css/bulma.css"> <!-- use min.css at the final -->
+    <link rel="icon" href="img/amau_logo.png">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
   </head>
   <body>
+    <div class="level level-right">
+      <img class="column is-two-thirds" src="img/amalibrary.png" alt="AMA Digital Library Icon">
+    </div>
 
     <level class="level level-left">
       <section class="section">
