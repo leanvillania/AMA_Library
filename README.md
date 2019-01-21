@@ -4,6 +4,9 @@ a project for AMA's digital library
 
 I created this repository for development purposes.
 
+Current Log:
+* Added More Stuff
+
 Release Notes (Jan. 21, 2019)
 * Added login system (might add school district)
 * Added AMA Logo
