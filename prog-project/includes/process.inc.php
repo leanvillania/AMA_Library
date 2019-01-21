@@ -8,7 +8,7 @@
 
     //Created a template
     $sql = "SELECT * FROM user_tbl WHERE user_USN = ? AND
-    user_password = ?";
+    user_password = ?;";
 
     //Create a prepared statement
     $stmt = mysqli_stmt_init($conn);
@@ -23,7 +23,18 @@
       mysqli_stmt_execute($stmt);
       $result = mysqli_stmt_get_result($stmt);
       if ($result >= 1) {
-        header('Location:../index.php?login=success');
+        //set session variable
+        session_start();
+
+        while ($row = mysqli_fetch_array($result)) {
+          //set session variables
+          $_SESSION["ID"] = $row['ID'];
+          $_SESSION["USN"] = $row['USN'];
+          $_SESSION["fullname"] = $row['fullname'];
+          $_SESSION["email"] = $row['email'];
+
+        }
+        header('Location: ../home.php');
       } else {
         header('Location:../index.php?login=failed');
       }
